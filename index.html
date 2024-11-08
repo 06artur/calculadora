@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3210/3210053.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+</head>
+<body>
+
+    <header>
+        <h1>Indice de Massa Corporal</h1> <nav>
+            <ul>
+                <li><a href="#calculo">Cálculo</a></li>
+                <li><a href="#footer">Home</a></li>
+            </ul>
+        </nav> </header>
+
+        <div class="container"><p>A classificação do índice de massa corporal (IMC) pode ajudar a identificar problemas de obesidade ou desnutrição, em crianças, adolescentes, adultos e idosos.
+
+            Além de calcular o valor de IMC, esta calculadora também indica qual o intervalo de peso ideal que deve ter para garantir uma melhor qualidade de vida. Ter um peso dentro do intervalo de peso ideal ajuda ainda a evitar o aparecimento de várias doenças crônicas, como diabetes e hipertensão. De acordo com o resultado de IMC também é possível prever o risco que cada pessoa tem de desenvolver doenças crônicas. Isto porque quanto maior é o valor do IMC, maior é a quantidade de gordura acumulada no corpo e maior o risco de doenças como pressão alta, diabetes e problemas cardíacos.
+        </p>
+
+        <img src="https://lh3.googleusercontent.com/INGzroR3qO8h5A6z7151iyO4AhAGYRVjWHQrda7eSUMDeN-A5wvIohQa4Qs8OX2LGAhKeqxze9bGZHGDzOC3zFxQKUXSNYS84Mg=s0" alt=""></div>
+
+    <h2>Cálculo IMC:</h2>
+    
+    <form action="#">
+        <label for="altura"> Altura: </label>
+        <input type="number" name="altura" id="altura">
+
+        <label for="peso"> Peso (kg): </label>
+        <input type="number" name="peso" id="peso">
+
+        <button onclick="calcImc()"> Calcular IMC </button>
+
+        <p>Seu índice de massa corporal é: <span id="resultado"></span></p>
+
+    </form> 
+    
+    <script>
+        function calcImc(){
+            const altura = parseFloat(document.getElementById("altura").value);
+            
+
+            const peso = parseFloat(document.getElementById("peso").value);
+
+            const resultado = peso / (altura**2)
+
+            document.getElementById("resultado").textContent = resultado.toFixed(2);
+        }
+    </script>
+
+    <footer>&copy;2024</footer>
+    
+</body>
+</html>
